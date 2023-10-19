@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Import Roboto-font */
+
+*
+{
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+}
+
+:root /* Definindo as variáveis */
+{
+    --cor-titulo-forms: #0085b2;
+    --borda-divs: #000;
+}
+
+/* Parte Section form */
+
+section#form
+{
+    padding: 1em;
+}
+
+section#form > h1
+{
+    text-align: center;
+    color: #000;
+    margin-bottom: 2em;
+}
+
+section#form > div#dados_fornecedor, div#produtos_fornecedor, div#arquivos_fornecedor
+{
+    border: 1px solid var(--borda-divs);
+    border-radius: 5px;
+    /* box-shadow: 0px 0px 2px 2px #4e4e4e; */
+    padding: 1.5em;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+div#dados_fornecedor::before  /* Cria o título em cada espaço */
+{
+    content: "Dados do Fornecedor";
+    background-color: var(--cor-titulo-forms);
+    border: 1px solid var(--borda-divs);
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.2em;
+}
+
+div#produtos_fornecedor::before  /* Cria o título em cada espaço */
+{
+    content: "Produtos";
+    background-color: var(--cor-titulo-forms);
+    border: 1px solid var(--borda-divs);
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.2em;
+}
+
+div#arquivos_fornecedor::before  /* Cria o título em cada espaço */
+{
+    content: "Anexos";
+    background-color: var(--cor-titulo-forms);
+    border: 1px solid var(--borda-divs);
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.2em;
+}
+/* Fim da parte Section form */
+
+
+/* Parte dos produtos */
+
+div.produto, div.anexos /* Responsável por cirar o espaço dos produtos */
+{
+    border: 1px solid var(--borda-divs);
+    border-radius: 5px;
+    padding: 2em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+div.clearfix > img
+{
+    border-radius: 50%;
+    transform: scaleX(-1);
+    width: 12em !important;
+}
+
+button.btn-danger
+{
+    margin-top: 2em;
+}
+
+div.produto::before  /* Cria o título na div de produto */
+{
+    content: "Produto";
+    background-color: #fff;
+    font-size: 1em;
+    border-radius: 5px;
+    position: absolute;
+    top: 8%;
+    left: 6%;
+    transform: translate(-50%, -50%);
+    padding: 0.2em;
+}
+div.anexos::before  /* Cria o título na div de produto */
+{
+    content: "Itens";
+    background-color: #fff;
+    font-size: 1em;
+    border-radius: 5px;
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    transform: translate(-50%, -50%);
+    padding: 0.2em;
+}
+
+
+/* Parte dos inputs e dos labels */
+
+
+label
+{
+    margin-bottom: -10em !important;
+    margin-top: 0.6em;
+}
+
+
+/* Parte Loading... produtos */
+
+#loading-master 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    display: none; /* Inicialmente oculto */
+    z-index: 1;
+    animation: fadeIn 0.5s; /* Adiciona uma animação de aparecimento */
+}
+  
+#loading 
+{
+    margin-top: 10em;
+    color: #fff;
+    padding: 20px;
+    font-size: 2em;
+    border-radius: 5px;
+    text-align: center;
+    animation: fadeOut 1s; /* Adiciona uma animação de desaparecimento após 3 segundos */
+}
+
+@keyframes fadeIn 
+{
+    from 
+    {
+      opacity: 0;
+    }
+    to 
+    {
+      opacity: 1;
+    }
+  }
+
+@keyframes fadeOut 
+{
+    from 
+    {
+      opacity: 1;
+    }
+    to 
+    {
+      opacity: 0;
+      display: none;
+    }
+}
+
+
+/* Parte Loading... Salvar */
+
+#loading-save
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95); /* Fundo semi-transparente */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    display: none;
+    z-index: 1;
+    animation: fadeIn 0.5s; /* Adiciona uma animação de aparecimento */
+}
+  
+#loadings
+{
+    margin-top: 10em;
+    color: #fff;
+    padding: 20px;
+    font-size: 2em;
+    border-radius: 5px;
+    text-align: center;
+    animation: fadeOut 1s; /* Adiciona uma animação de desaparecimento após 3 segundos */
+}
+
+@keyframes fadeIn 
+{
+    from 
+    {
+      opacity: 0;
+    }
+    to 
+    {
+      opacity: 1;
+    }
+  }
+
+
+/* Anexos */
+
+div.area_soltar
+{
+    border: 1px dashed #ccc;
+    cursor: pointer;
+    text-align: center;
+    padding: 2em;
+}
