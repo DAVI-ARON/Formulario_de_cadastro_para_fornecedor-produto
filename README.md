@@ -57,4 +57,4 @@ O desenvolvimento do formulário seguiu o layout existente na guia: **Layout**
 
 ## 🎨 Layout
 
-O layout do desafio está em anexo na pasta [docs](./docs/) deste repositório.
+O layout do desafio está em anexo na pasta [assets/Layout](./assets/Layout) deste repositório.
