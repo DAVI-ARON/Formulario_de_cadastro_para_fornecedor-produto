@@ -1,6 +1,6 @@
 
 <h2 align="center">
-  Desafio Front-End para vaga
+  Desafio Front-End
 </h2>
 
 
