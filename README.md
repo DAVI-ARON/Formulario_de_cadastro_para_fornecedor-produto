@@ -52,7 +52,7 @@ O desenvolvimento do formulário seguiu o layout existente na guia: **Layout**
   - Os documentos anexados deverão ser armazenados em memória (blob e session storage) para envio
   - O Botão Excluir (lixeira) - Ao excluir o documento, deverá ser excluído da memória
   - O Botão Visualizar (olho) - Ao visualizar o documento, deve ser feito o download
-- **Botão Salvar Fornecedor**: ao clicar no botão, deverá ser aberto modal de loading de envio, e deverá ser formatado um JSON com os dados a serem enviados, conforme exemplo: [jsonExemplo](./jsonExemplo/) 
+- **Botão Salvar Fornecedor**: ao clicar no botão, deverá ser aberto modal de loading de envio, e deverá ser formatado um JSON com os dados a serem enviados
   - **OBS Sobre o JSON**: o JSON de resultado pode ser baixado ou apenas exibido no console do browser.
 
 ## 🎨 Layout
